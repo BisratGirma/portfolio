@@ -53,9 +53,27 @@
             />
           </figure>
 
-          <div class="info-content">
-            <h1 class="name" title="Bisrat Girma">Bisrat Girma</h1>
+          <div class="info-content" style="display: inline;">
+            <div style="display: flex; justify-content: center; padding-left: 10px; padding-right: 10px;">
+              <div class="word" title="Bisrat">
+              <span>Bisrat</span>
+              <span> </span>
+              <span>Girma</span>
+              <!-- <span>I</span>
+              <span>S</span>
+              <span>R</span>
+              <span>A</span>
+              <span>T</span> -->
+              </div>
 
+              <!-- <div class="word" title="Girma">
+                <span>Girma</span> 
+                <span>I</span>
+                <span>R</span>
+                <span>M</span>
+                <span>A</span> 
+              </div> -->
+           </div>
             <p class="title">FullStack Developer | Software Engineer</p>
           </div>
 
@@ -204,20 +222,12 @@
           </header>
 
           <section class="about-text">
-            <p>
-              <span>I am a software engineer</span>
-              <span> who enjoys creating cutting-edge solutions</span>
-              <span> for companies that make a difference.</span>
-            </p>
-
-            <p>
-              <span>My job is to build your website using modern technologies</span> 
-              <span> like ReactJS, NextJS, and NodeJS.</span>
-              <span> I will create a user-friendly and attractive interface that is easy to use and reflects your unique message and identity.</span>
-              <span> I am also passionate about learning new technologies and trends to improve agriculture, supply chain, and education outcomes.</span>
-              <span> I believe that technology has the potential to empower people and create a better future for all.</span>
-              <span> I am confident that I have the skills and experience necessary to build you a website that you will be proud of. I look forward to working with you to create a website that achieves your goals and makes a positive impact on the world.</span>
-            </p>
+            
+              <span>I am Bisrat, a FullStack Web Developer,</span>
+              <!-- <span>I enjoy creating user friendly website for you!</span> -->
+            
+              <span>My job is to build a user-friendly and attractive interface that is easy to use and reflects your unique message and identity.</span>
+          
           </section>
 
           <!--
@@ -722,7 +732,7 @@ I highly recommend Bisrat Girma without reservation.
 
               <li class="skills-item">
                 <div class="title-wrapper">
-                  <h5 class="h5">NestJst</h5>
+                  <h5 class="h5">NestJs</h5>
                   <data value="100"></data>
                 </div>
 
@@ -1293,5 +1303,23 @@ I highly recommend Bisrat Girma without reservation.
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script>
+
+      const spans = document.querySelectorAll('.word span');
+
+      spans.forEach((span, idx) => {
+        span.addEventListener('click', (e) => {
+          e.target.classList.add('active');
+        });
+        span.addEventListener('animationend', (e) => {
+          e.target.classList.remove('active');
+        });
+        
+        // Initial animation
+        setTimeout(() => {
+          span.classList.add('active');
+        }, 750 * (idx+1))
+      });
+    </script>
   </body>
 </html>
